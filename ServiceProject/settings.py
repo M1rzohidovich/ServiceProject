@@ -28,6 +28,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+SECRET_KEY = 'django-insecure-397sueq07p$f(af)ba63b94^luz^$*78v!2bn7h$#cj92tbpuz'
+
 ALLOWED_HOSTS = ['*']
 
 # Application definition
@@ -132,7 +134,7 @@ WSGI_APPLICATION = 'ServiceProject.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    "default": "DATABASE_URL"
+    "default": {"DATABASE_URL"}
     # 'default': {
     #     'ENGINE': 'django.db.backends.mysql',
     #     'NAME': 'service',
@@ -140,6 +142,7 @@ DATABASES = {
     #     'PASSWORD': 'Aa12345',
     #     'PORT': '3306'
     # }
+
 }
 
 
@@ -221,6 +224,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 
 # Default primary key field type
