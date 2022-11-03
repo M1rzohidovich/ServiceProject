@@ -1,1 +1,1 @@
-web: gunicorn ServiceProject.wsgi --log-file-
+web: gunicorn ServiceProject.wsgi --log-file -
