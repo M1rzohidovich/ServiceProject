@@ -12,12 +12,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import os
 from pathlib import Path
 from datetime import timedelta
-from environs import Env
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 from corsheaders.defaults import default_methods
-
-env = Env()
-env.read_env()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -31,13 +27,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-#SECRET_KEY = env.str("SECRET_KEY ")
+
 SECRET_KEY = 'django-insecure-397sueq07p$f(af)ba63b94^luz^$*78v!2bn7h$#cj92tbpuz'
 
 ALLOWED_HOSTS = ['*']
 
 # Application definition
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -138,7 +135,6 @@ WSGI_APPLICATION = 'ServiceProject.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    #"default": env.dj_db_url("DATABASE_URL")
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'd2jh8s61ed7sbq',
