@@ -137,7 +137,6 @@ WSGI_APPLICATION = 'ServiceProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-postgres://gwnmyfqjqalmbh:0b8da0c49004510ed05a12d983f4a94d5a70bb14809f471720e35d924d528f84@ec2-54-163-34-107.compute-1.amazonaws.com:5432/d2jh8s61ed7sbq
 DATABASES = {
     #"default": env.dj_db_url("DATABASE_URL")
     'default': {
