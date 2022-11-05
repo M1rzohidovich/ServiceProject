@@ -74,6 +74,7 @@ CORS_ALLOWED_ORIGINS = [
 
 CORS_ALLOWED_ORIGIN_REGEXES = [
     r"http://hooded-developer.uz/",
+    r"https://moy-uborka.netlify.app/",
 ]
 
 
@@ -233,7 +234,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Django admin panel settings
 JAZZMIN_SETTINGS = {
-"site_header": "My Service",
-"show_ui_builder": True,
+    "site_brand": "My Service",
+}
+
+JAZZMIN_UI_TWEAKS = {
+    "theme": "flatly",
+    "dark_mode_theme": "darkly",
 }
