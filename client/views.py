@@ -1,6 +1,5 @@
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework_simplejwt.authentication import JWTAuthentication
 from .serializers import TashqiMijozSerializer, IchkiMijozSerializer
 
 
@@ -14,20 +13,20 @@ class TashqiMijozCreateApi(APIView):
     #     return Response(externalclient_list)
 
     def post(self, request):
-            tm = TashqiMijozSerializer(data=request.data)
-            tm.is_valid(raise_exception=True)
-            tm.save()
-            data = tm.data
+        ec = TashqiMijozSerializer(data=request.data)
+        ec.is_valid(raise_exception=True)
+        ec.save()
+        data = ec.data
 
-            return Response(data)
+        return Response(data)
         
 
 class IchkiMijozCreateApi(APIView):
 
     def post(self, request):
-        im = IchkiMijozSerializer(data=request.data)
-        im.is_valid(raise_exception=True)
-        im.save()
-        data = im.data
+        ic = IchkiMijozSerializer(data=request.data)
+        ic.is_valid(raise_exception=True)
+        ic.save()
+        data = ic.data
 
         return Response(data)
