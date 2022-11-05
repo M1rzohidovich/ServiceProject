@@ -6,7 +6,7 @@ from client.models import TashqiMijoz, IchkiMijoz
 class TashqiMijozSerializer(serializers.ModelSerializer):
      
     def create(self, validated_data):
-          return TashqiMijoz.objects.create(**validated_data)
+        return TashqiMijoz.objects.create(**validated_data)
 
     class Meta:
         model = TashqiMijoz

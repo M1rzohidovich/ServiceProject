@@ -6,7 +6,7 @@ class IchkiMijoz(models.Model):
     name = models.CharField(max_length=50)
     surname = models.CharField(max_length=60)
     phone_number = models.CharField(max_length=15)
-    address = models.CharField(max_length=230)
+    address = models.CharField(max_length=180)
     upload_date = models.DateTimeField(auto_now_add=True)
     order = models.ForeignKey(InternalBlog, on_delete=models.CASCADE)
     
@@ -19,7 +19,7 @@ class TashqiMijoz(models.Model):
     name = models.CharField(max_length=50)
     surname = models.CharField(max_length=60)
     phone_number = models.CharField(max_length=50)
-    address = models.CharField(max_length=230)
+    address = models.CharField(max_length=180)
     upload_date = models.DateTimeField(auto_now_add=True)
     order = models.ForeignKey(ExternalBlog, on_delete=models.CASCADE)
 

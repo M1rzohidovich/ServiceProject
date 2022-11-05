@@ -137,11 +137,11 @@ WSGI_APPLICATION = 'ServiceProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd2jh8s61ed7sbq',
-        'USER': 'gwnmyfqjqalmbh',
-        'PASSWORD': '0b8da0c49004510ed05a12d983f4a94d5a70bb14809f471720e35d924d528f84',
+        'NAME': 'd61k5ihg55vb9u',
+        'USER': 'vzmwkhbuzgssoc',
+        'PASSWORD': '110095e8c65eaaefe3e22a300cc6ab430f56ccc26d688c9db0181edd91be497b',
         'PORT': '5432',
-        'HOST': 'ec2-54-163-34-107.compute-1.amazonaws.com'
+        'HOST': 'ec2-44-195-132-31.compute-1.amazonaws.com'
     }
 
 }
