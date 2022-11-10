@@ -3,8 +3,7 @@ from main.models import InternalBlog, ExternalBlog
 
 
 class IchkiMijoz(models.Model):
-    name = models.CharField(max_length=50)
-    surname = models.CharField(max_length=60)
+    fullname = models.CharField(max_length=70)
     phone_number = models.CharField(max_length=15)
     address = models.CharField(max_length=180)
     comment = models.TextField()
@@ -18,9 +17,8 @@ class IchkiMijoz(models.Model):
 
 
 class TashqiMijoz(models.Model):
-    name = models.CharField(max_length=50)
-    surname = models.CharField(max_length=60)
-    phone_number = models.CharField(max_length=50)
+    fullname = models.CharField(max_length=70)
+    phone_number = models.CharField(max_length=15)
     address = models.CharField(max_length=180)
     comment = models.TextField()
     cleaning_date = models.DateTimeField()

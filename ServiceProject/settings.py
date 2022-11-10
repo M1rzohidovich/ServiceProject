@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 SECRET_KEY = 'django-insecure-397sueq07p$f(af)ba63b94^luz^$*78v!2bn7h$#cj92tbpuz'
@@ -68,12 +68,13 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
     "http://localhost:3000",
     "http://localhost:5500",
-    "http://127.0.0.1:5500",
+    "http://127.0.0.1:5501",
+
     
 ]
 
 CORS_ALLOWED_ORIGIN_REGEXES = [
-    r"http://hooded-developer.uz/",
+    r"https://moy-uborka.netlify.app/",
 ]
 
 
@@ -106,9 +107,10 @@ CORS_ALLOW_HEADERS = [
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "http://hooded-developer.uz/"
+    "https://moy-uborka.netlify.app/",
 ]
 CSRF_COOKIE_HTTPONLY = True
+
 
 ROOT_URLCONF = 'ServiceProject.urls'
 
@@ -136,13 +138,13 @@ WSGI_APPLICATION = 'ServiceProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd61k5ihg55vb9u',
-        'USER': 'vzmwkhbuzgssoc',
-        'PASSWORD': '110095e8c65eaaefe3e22a300cc6ab430f56ccc26d688c9db0181edd91be497b',
-        'PORT': '5432',
-        'HOST': 'ec2-44-195-132-31.compute-1.amazonaws.com'
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'service',
+        'USER': 'Admin',
+        'PASSWORD': 'Aa12345',
+        'PORT': '3306'
     }
+
 
 }
 

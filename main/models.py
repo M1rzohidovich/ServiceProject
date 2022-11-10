@@ -32,7 +32,7 @@ class InternalBlog(models.Model):
 
 class ExternalBlog(models.Model):
     title = models.CharField(max_length=50)
-    img1 = models.ImageField(upload_to=slugify_upload)
+    img = models.ImageField(upload_to=slugify_upload)
     img2 = models.ImageField(upload_to=slugify_upload, blank=True)
     img3 = models.ImageField(upload_to=slugify_upload, blank=True)
     description = models.TextField()
