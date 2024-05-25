@@ -17,6 +17,7 @@ class AnnouncementListApiView(APIView):
         return Response(announcement_list)
 
 
+
 class GetExternalBlog(APIView):
 
     def get(self, request):

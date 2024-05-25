@@ -1,12 +1,11 @@
 from rest_framework import serializers
-
 from main.models import Announcement, WorkerContact, InternalBlog, ExternalBlog
 
 
 class AnnouncementSerializer(serializers.ModelSerializer):
 
-    def create(self, validated_data):
-        return Announcement.objects.create(**validated_data)
+    # def create(self, validated_data):
+    #     return Announcement.objects.create(**validated_data)
 
     class Meta:
         model = Announcement

@@ -2,6 +2,7 @@ from os.path import splitext
 
 from django.db import models
 from django.utils.text import slugify
+from ckeditor.fields import RichTextField
 
 
 def slugify_upload(instance, filename):
@@ -20,11 +21,11 @@ def slugify_upload(instance, filename):
 
 
 class InternalBlog(models.Model):
-    title = models.CharField(max_length=50)
+    title = models.CharField(max_length=60, null=True)
     img = models.ImageField(upload_to=slugify_upload)
     img2 = models.ImageField(upload_to=slugify_upload, blank=True)
     img3 = models.ImageField(upload_to=slugify_upload, blank=True)
-    description = models.TextField()
+    description = RichTextField(null=True)
 
     def __str__(self):
         return self.title
@@ -35,7 +36,7 @@ class ExternalBlog(models.Model):
     img = models.ImageField(upload_to=slugify_upload)
     img2 = models.ImageField(upload_to=slugify_upload, blank=True)
     img3 = models.ImageField(upload_to=slugify_upload, blank=True)
-    description = models.TextField()
+    description = RichTextField(null=True)
 
     def __str__(self):
         return self.title
@@ -46,7 +47,7 @@ class Announcement(models.Model):
     img1 = models.ImageField(upload_to=slugify_upload)
     img2 = models.ImageField(upload_to=slugify_upload, blank=True)
     img3 = models.ImageField(upload_to=slugify_upload, blank=True)
-    description = models.TextField()
+    description = models.CharField(max_length=200)
 
     class Meta:
         verbose_name = "Announcement"

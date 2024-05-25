@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'main',
     'client',
     #external_app
+    'ckeditor_uploader',
+    'ckeditor',
     'rest_framework',
     'rest_framework_simplejwt',
     'corsheaders',
@@ -65,16 +67,18 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:8000",
     "http://localhost:8080",
     "http://localhost:3000",
     "http://localhost:5500",
     "http://127.0.0.1:5501",
+    
 
     
 ]
 
 CORS_ALLOWED_ORIGIN_REGEXES = [
-    r"https://moy-uborka.netlify.app/",
+    "http://127.0.0.1:8000"
 ]
 
 
@@ -107,10 +111,14 @@ CORS_ALLOW_HEADERS = [
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "https://moy-uborka.netlify.app/",
+    "http://127.0.0.1:8000",
+    
 ]
 CSRF_COOKIE_HTTPONLY = True
 
+CSRF_COOKIE_HTTPONLY = True
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = False
 
 ROOT_URLCONF = 'ServiceProject.urls'
 
@@ -230,12 +238,15 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Django admin panel settings
+
 JAZZMIN_SETTINGS = {
     "site_brand": "My Service",
 }
@@ -244,3 +255,13 @@ JAZZMIN_UI_TWEAKS = {
     "theme": "united",
     "dark_mode_theme": "darkly",
 }
+
+# CKEDITOR_CONFIG
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Full',
+    },
+}
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_RESTRICT_BY_USER = True

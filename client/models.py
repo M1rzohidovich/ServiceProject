@@ -13,7 +13,7 @@ class IchkiMijoz(models.Model):
     
     class Meta:
         verbose_name = "IchkiMijoz"
-        verbose_name_plural = "IchkiMijozs"
+        verbose_name_plural = "IchkiMijozlar"
 
 
 class TashqiMijoz(models.Model):
@@ -27,4 +27,4 @@ class TashqiMijoz(models.Model):
 
     class Meta:
         verbose_name = "TashqiMijoz"
-        verbose_name_plural = "TashqiMijozs"
+        verbose_name_plural = "TashqiMijozlar"
